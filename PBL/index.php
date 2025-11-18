@@ -225,14 +225,17 @@
                 </div>
             </div>
 
-            <div class="grid-nav-buttons">
-                <a href="#" class="nav-arrow left">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </a>
-                <a href="#" class="nav-arrow right">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
-            </div>
+        <div class="grid-nav-buttons">
+            
+            <a href="javascript:void(0)" class="circle-btn-bottom" id="btnCollapse">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+
+            <a href="javascript:void(0)" class="circle-btn-bottom">
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+        </div>
 
         </div>
 
@@ -286,17 +289,34 @@
     </section>
 
 <script>
-    const toggleBtn = document.getElementById('toggleNewsBtn');
-    const moreNewsSection = document.getElementById('moreNewsSection');
+    const toggleBtn = document.getElementById('toggleNewsBtn');    // Tombol Tengah Utama
+    const moreNewsSection = document.getElementById('moreNewsSection'); // Bagian 6 Berita Tambahan
+    const btnCollapse = document.getElementById('btnCollapse');    // Tombol Kiri Bawah
 
+    // 1. FUNGSI BUKA (Saat Tombol Tengah diklik)
     toggleBtn.addEventListener('click', function(e) {
         e.preventDefault(); 
-
-        // 1. Munculkan 6 kotak berita tambahan
+        
+        // Munculkan 6 kotak berita
         moreNewsSection.style.display = "block";
-
-        // 2. HILANGKAN tombol lingkaran itu sendiri
+        
+        // Sembunyikan tombol tengah ini sendiri
         toggleBtn.style.display = "none";
+    });
+
+    // 2. FUNGSI TUTUP (Saat Tombol Kiri Bawah diklik)
+    btnCollapse.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Sembunyikan kembali 6 kotak berita
+        moreNewsSection.style.display = "none";
+
+        // MUNCULKAN KEMBALI tombol tengah (Reset)
+        // Kita pakai 'flex' agar posisinya tetap rapi di tengah (sesuai CSS aslinya)
+        toggleBtn.style.display = "flex"; 
+        
+        // Opsional: Scroll sedikit ke atas agar user sadar tampilan sudah menutup
+        document.querySelector('.news-section').scrollIntoView({ behavior: 'smooth' });
     });
 </script>
 
