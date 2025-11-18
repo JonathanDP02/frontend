@@ -317,6 +317,52 @@
         
         // Opsional: Scroll sedikit ke atas agar user sadar tampilan sudah menutup
         document.querySelector('.news-section').scrollIntoView({ behavior: 'smooth' });
+
+// --- SCRIPT SLIDING MENU YANG DIPERBAIKI ---
+    const navPill = document.querySelector('.nav-pill'); // Container utama
+    const indicator = document.querySelector('.nav-indicator');
+    const items = document.querySelectorAll('.nav-item');
+
+    function handleIndicator(el) {
+        items.forEach(item => {
+            item.classList.remove('active');
+            item.style.color = ""; 
+        });
+
+        // 1. Ambil koordinat kotak container utama
+        const parentRect = navPill.getBoundingClientRect();
+        
+        // 2. Ambil koordinat tombol yang disorot
+        const elementRect = el.getBoundingClientRect();
+
+        // 3. Hitung jarak selisihnya (Posisi Akurat)
+        const relativeLeft = elementRect.left - parentRect.left;
+        const relativeTop = elementRect.top - parentRect.top;
+
+        // 4. Terapkan ke indikator
+        indicator.style.width = `${elementRect.width}px`;
+        indicator.style.left = `${relativeLeft}px`;
+        indicator.style.top = `${relativeTop}px`; // Jaga-jaga agar vertikal juga pas
+        
+        indicator.style.opacity = '1'; 
+
+        el.classList.add('active');
+        el.style.color = "white";
+    }
+
+    items.forEach((item) => {
+        item.addEventListener('mouseenter', (e) => {
+            handleIndicator(e.target);
+        });
+    });
+
+    // Jalankan saat halaman selesai dimuat agar tombol Home langsung aktif
+    window.addEventListener('load', () => {
+        // Cari menu yang punya kelas 'active' di HTML, atau default ke yang pertama
+        const activeItem = document.querySelector('.nav-item.active') || items[0];
+        if(activeItem) {
+            handleIndicator(activeItem);
+        }
     });
 </script>
 

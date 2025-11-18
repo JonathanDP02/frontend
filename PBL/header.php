@@ -5,12 +5,14 @@
     </div>
 
     <nav class="nav-pill">
+        <div class="nav-indicator"></div>
+
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#" class="btn-gallery">Gallery</a></li>
+            <li><a href="#" class="nav-item active">Home</a></li>
+            <li><a href="#" class="nav-item">About</a></li>
+            <li><a href="#" class="nav-item">Team</a></li>
+            <li><a href="#" class="nav-item">News</a></li>
+            <li><a href="#" class="nav-item">Gallery</a></li>
         </ul>
     </nav>
 
