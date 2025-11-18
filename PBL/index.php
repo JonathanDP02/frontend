@@ -106,8 +106,13 @@
 
     </section>
 
+
     <section class="news-section">
         
+
+    <section id="news" class="news-section">
+
+
         <h2 class="news-heading gradient-text">News</h2>
 
         <div class="news-container">
