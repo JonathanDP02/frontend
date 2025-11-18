@@ -6,11 +6,11 @@
 
     <nav class="nav-pill">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#" class="btn-gallery">Gallery</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="team.php">Team</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="gallery.php" class="btn-gallery">Gallery</a></li>
         </ul>
     </nav>
 
