@@ -48,14 +48,63 @@ header {
 }
 
 /* NAVIGASI (Hanya perlu menyesuaikan sedikit, karena sudah berbentuk pill/kapsul) */
+/* --- PERBAIKAN DI STYLE.CSS --- */
+
 .nav-pill {
-    /* Background sudah putih secara default karena border-nya biru,
-       tapi kita bisa pastikan dan tambahkan shadow */
+    position: relative; /* Patokan utama */
     background-color: #fff;
     border: 2px solid var(--primary-blue);
     border-radius: 50px;
-    padding: 5px 5px 5px 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan lembut */
+    padding: 5px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: inline-flex; 
+}
+
+.nav-pill ul {
+    list-style: none;
+    display: flex;
+    gap: 0; 
+    
+    /* WAJIB: Reset margin & padding agar perhitungan JS akurat */
+    margin: 0 !important; 
+    padding: 0 !important;
+    
+    position: relative;
+    z-index: 2; /* Teks di atas indikator */
+}
+
+.nav-pill a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 10px 25px;
+    display: block;
+    border-radius: 50px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* State Aktif/Hover */
+.nav-pill a:hover,
+.nav-pill a.active {
+    color: white; 
+}
+
+/* Indikator */
+.nav-indicator {
+    position: absolute;
+    /* Hapus top/left default di sini, biar diatur JS sepenuhnya */
+    top: 5px; 
+    height: calc(100% - 10px); 
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 50px;
+    z-index: 1; 
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* Default agar tidak merusak tampilan sebelum JS jalan */
+    width: 0;
+    opacity: 0; 
 }
 
 /* TOMBOL KANAN (FORM) */
@@ -68,9 +117,9 @@ header {
 }
 
 .img-logo { height: 50px; width: auto; object-fit: contain; }
-.nav-pill { border: 2px solid var(--primary-blue); border-radius: 50px; padding: 5px 5px 5px 25px; }
+/* .nav-pill { border: 2px solid var(--primary-blue); border-radius: 50px; padding: 5px 5px 5px 25px; }
 .nav-pill ul { list-style: none; display: flex; gap: 30px; }
-.nav-pill a { text-decoration: none; color: #000; font-weight: 500; font-size: 0.95rem; }
+.nav-pill a { text-decoration: none; color: #000; font-weight: 500; font-size: 0.95rem; } */
 .btn-gallery {
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
     color: white !important; padding: 8px 25px; border-radius: 50px;
@@ -622,54 +671,76 @@ h1 {
     }
 }
 
-/* --- EXTRA NEWS GRID (HIDDEN SECTION) --- */
+/* --- EXTRA NEWS GRID (Menggunakan ulang news-container style) --- */
 
 .more-news-wrapper {
     margin-top: 60px;
     width: 100%;
-    animation: slideDown 0.5s ease-out; /* Animasi muncul halus */
+    animation: slideDown 0.5s ease-out; 
 }
 
-/* Grid Layout 3 Kolom x 3 Baris */
-.news-grid-3x3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 Kolom sama besar */
-    gap: 30px; /* Jarak antar kotak */
-    max-width: 1000px;
-    margin: 0 auto 50px auto; /* Margin bawah untuk jarak ke tombol nav */
-    padding: 0 20px;
+/* Menggunakan kelas .news-container untuk grid tambahan */
+.additional-news-grid {
+    /* news-container sudah punya display:flex, gap, dll */
+    /* Pastikan max-width dan margin: 0 auto; ada pada .news-container */
+    /* Jika ingin memaksa 3 kolom di layar lebar: */
+    /* grid-template-columns: repeat(3, 1fr); */ 
+    /* display: grid; */ /* ini jika Anda ingin pakai grid */
+    /* gap: 40px; */ /* disesuaikan dengan news-container */
 }
 
-/* Styling Kotak Abu-abu */
-.grid-news-card {
-    background-color: #C4C4C4; /* Warna abu-abu sesuai referensi gambar */
-    border-radius: 15px;
-    width: 100%;
-    height: 0;
-    padding-bottom: 130%; /* Membuat kotak persegi panjang vertikal (Aspect Ratio) */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.grid-news-card:hover {
-    transform: translateY(-5px);
-    background: linear-gradient(135deg, var(--primary-blue), var(--gradient-end)); /* Efek hover */
-}
-
-/* Tombol Navigasi di Bawah Grid */
+/* Tombol Navigasi di Bawah Grid (jika ada) */
 .grid-nav-buttons {
     display: flex;
     justify-content: center;
-    gap: 150px; /* Jarak jauh antara kiri dan kanan sesuai gambar */
-    margin-top: 20px;
+    gap: 150px; 
+    margin-top: 50px; /* Jarak dari kartu ke tombol */
 }
 
-/* Animasi slide ke bawah saat tombol ditekan */
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .news-container.additional-news-grid {
+        flex-direction: column; /* Menumpuk vertikal di mobile */
+        align-items: center; /* Kartu berada di tengah */
+    }
+    .grid-nav-buttons {
+        gap: 50px;
+    }
 }
 
+/* --- BUTTON NAVIGASI BAWAH (Style Kembar dengan Tombol Tengah) --- */
+.grid-nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Jarak antar tombol kiri & kanan */
+    margin-top: 60px;
+    padding-bottom: 40px;
+}
+
+.circle-btn-bottom {
+    width: 80px;     /* Ukuran sama dengan tombol tengah */
+    height: 80px;
+    border-radius: 50%;
+    
+    /* Warna Gradasi yang sama */
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    
+    /* Shadow yang sama */
+    box-shadow: 0 5px 20px rgba(106, 90, 205, 0.4);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+
+.circle-btn-bottom:hover {
+    transform: scale(1.1); /* Efek membesar saat di-hover */
+=======
 /* Responsive Mobile: Jadi 1 kolom saja */
 @media (max-width: 768px) {
     .news-grid-3x3 {
@@ -890,4 +961,5 @@ h1 {
     .gallery-page .gallery-wall {
         grid-template-columns: repeat(2, minmax(120px, 1fr));
     }
+
 }
