@@ -1,4 +1,6 @@
 
+<?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
+
 <header>
     <div class="logo">
         <img src="img/logo.png" alt="Logo" class="img-logo">
@@ -8,11 +10,31 @@
         <div class="nav-indicator"></div>
 
         <ul>
-            <li><a href="#" class="nav-item active">Home</a></li>
-            <li><a href="#" class="nav-item">About</a></li>
-            <li><a href="#" class="nav-item">Team</a></li>
-            <li><a href="#" class="nav-item">News</a></li>
-            <li><a href="#" class="nav-item">Gallery</a></li>
+            <li>
+                <a href="index.php" class="nav-item <?php echo $currentPage === 'index.php' ? 'active' : ''; ?>">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="about.php" class="nav-item <?php echo $currentPage === 'about.php' ? 'active' : ''; ?>">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="team.php" class="nav-item <?php echo $currentPage === 'team.php' ? 'active' : ''; ?>">
+                    Team
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $currentPage === 'index.php' ? '#news' : 'index.php#news'; ?>" class="nav-item">
+                    News
+                </a>
+            </li>
+            <li>
+                <a href="gallery.php" class="nav-item <?php echo $currentPage === 'gallery.php' ? 'active' : ''; ?>">
+                    Gallery
+                </a>
+            </li>
         </ul>
     </nav>
 

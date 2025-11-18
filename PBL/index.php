@@ -13,7 +13,7 @@
 <body>
 
     <?php include 'header.php'; ?>
-    
+
     <section class="hero">
         <div class="hero-content">
             <h1>
@@ -68,8 +68,6 @@
         </div>
     </section>
 
-    </section>
-
     <section class="portfolio-section">
         <div class="portfolio-container">
 
@@ -104,173 +102,167 @@
         </div>
     </section>
 
-    </section>
-
-
-    <section class="news-section">
-        
-
     <section id="news" class="news-section">
 
 
-        <h2 class="news-heading gradient-text">News</h2>
+            <h2 class="news-heading gradient-text">News</h2>
 
-        <div class="news-container">
-            <div class="news-card-border">
-                <div class="news-card">
-                    <img src="img/news 1.png" alt="News 1" class="news-card-img"> 
-                    <div class="news-card-content">
-                        <h3 class="news-card-title">Visiting Scientist Program</h3>
-                        <p class="news-card-description">
-                            In November, 2023, we had a chance to had a research collaboration with Hiroshima University
-                        </p>
+            <div class="news-container">
+                <div class="news-card-border">
+                    <div class="news-card">
+                        <img src="img/news 1.png" alt="News 1" class="news-card-img">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title">Visiting Scientist Program</h3>
+                            <p class="news-card-description">
+                                In November, 2023, we had a chance to had a research collaboration with Hiroshima University
+                            </p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="news-card-wrapper">
+                    <div class="news-card-border">
+                        <div class="news-card">
+                            <img src="img/news 2.png" alt="News 2" class="news-card-img">
+                            <div class="news-card-content">
+                                <h3 class="news-card-title">Monthly Research Discussion</h3>
+                                <p class="news-card-description">
+                                    Conducting a routine monthly research discussion to find new concept and finding
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="javascript:void(0)" class="news-button" id="toggleNewsBtn">
+                        <i class="fa-solid fa-chevron-down"></i> </a>
+                </div>
+
+                <div class="news-card-border">
+                    <div class="news-card">
+                        <img src="img/news 3.png" alt="News 3" class="news-card-img">
+                        <div class="news-card-content">
+                            <h3 class="news-card-title">International Research Discussion Program</h3>
+                            <p class="news-card-description">
+                                Enriching the research area by having Research discussion
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="news-card-wrapper"> 
-                <div class="news-card-border">
-                    <div class="news-card">
-                        <img src="img/news 2.png" alt="News 2" class="news-card-img">
-                        <div class="news-card-content">
-                            <h3 class="news-card-title">Monthly Research Discussion</h3>
-                            <p class="news-card-description">
-                                Conducting a routine monthly research discussion to find new concept and finding
-                            </p>
+            <div id="moreNewsSection" class="more-news-wrapper" style="display: none;">
+
+                <div class="news-container additional-news-grid">
+                    <div class="news-card-border">
+                        <div class="news-card">
+                            <img src="img/news4.png" alt="News 4" class="news-card-img">
+                            <div class="news-card-content">
+                                <h3 class="news-card-title">Workshop Data Science</h3>
+                                <p class="news-card-description">
+                                    Workshop intensif tentang dasar-dasar data science dan aplikasinya.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card-border">
+                        <div class="news-card">
+                            <img src="img/news5.png" alt="News 5" class="news-card-img">
+                            <div class="news-card-content">
+                                <h3 class="news-card-title">Guest Lecture AI Ethics</h3>
+                                <p class="news-card-description">
+                                    Diskusi mendalam mengenai etika AI dengan pembicara ahli internasional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card-border">
+                        <div class="news-card">
+                            <img src="img/news6.png" alt="News 6" class="news-card-img">
+                            <div class="news-card-content">
+                                <h3 class="news-card-title">Research Grant Award</h3>
+                                <p class="news-card-description">
+                                    Penghargaan hibah penelitian bagi tim dengan inovasi terbaik.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card-border">
+                        <div class="news-card">
+                            <img src="img/news7.png" alt="News 7" class="news-card-img">
+                            <div class="news-card-content">
+                                <h3 class="news-card-title">Student Exchange Program</h3>
+                                <p class="news-card-description">
+                                    Kesempatan belajar di luar negeri melalui program pertukaran mahasiswa.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card-border">
+                        <div class="news-card">
+                            <img src="img/news8.png" alt="News 8" class="news-card-img">
+                            <div class="news-card-content">
+                                <h3 class="news-card-title">New Publication</h3>
+                                <p class="news-card-description">
+                                    Rilis publikasi ilmiah terbaru dari anggota tim peneliti kami.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card-border">
+                        <div class="news-card">
+                            <img src="img/news9.png" alt="News 9" class="news-card-img">
+                            <div class="news-card-content">
+                                <h3 class="news-card-title">Community Service</h3>
+                                <p class="news-card-description">
+                                    Kegiatan pengabdian masyarakat berbasis teknologi untuk dampak sosial.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <a href="javascript:void(0)" class="news-button" id="toggleNewsBtn">
-                    <i class="fa-solid fa-chevron-down"></i> </a>
+
+                <div class="grid-nav-buttons">
+
+                    <a href="javascript:void(0)" class="circle-btn-bottom" id="btnCollapse">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+
+                    <a href="javascript:void(0)" class="circle-btn-bottom">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </div>
+
             </div>
-
-            <div class="news-card-border">
-                <div class="news-card">
-                    <img src="img/news 3.png" alt="News 3" class="news-card-img">
-                    <div class="news-card-content">
-                        <h3 class="news-card-title">International Research Discussion Program</h3>
-                        <p class="news-card-description">
-                            Enriching the research area by having Research discussion
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="moreNewsSection" class="more-news-wrapper" style="display: none;">
-            
-            <div class="news-container additional-news-grid">
-                <div class="news-card-border">
-                    <div class="news-card">
-                        <img src="img/news4.png" alt="News 4" class="news-card-img"> 
-                        <div class="news-card-content">
-                            <h3 class="news-card-title">Workshop Data Science</h3>
-                            <p class="news-card-description">
-                                Workshop intensif tentang dasar-dasar data science dan aplikasinya.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-card-border">
-                    <div class="news-card">
-                        <img src="img/news5.png" alt="News 5" class="news-card-img"> 
-                        <div class="news-card-content">
-                            <h3 class="news-card-title">Guest Lecture AI Ethics</h3>
-                            <p class="news-card-description">
-                                Diskusi mendalam mengenai etika AI dengan pembicara ahli internasional.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-card-border">
-                    <div class="news-card">
-                        <img src="img/news6.png" alt="News 6" class="news-card-img"> 
-                        <div class="news-card-content">
-                            <h3 class="news-card-title">Research Grant Award</h3>
-                            <p class="news-card-description">
-                                Penghargaan hibah penelitian bagi tim dengan inovasi terbaik.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-card-border">
-                    <div class="news-card">
-                        <img src="img/news7.png" alt="News 7" class="news-card-img"> 
-                        <div class="news-card-content">
-                            <h3 class="news-card-title">Student Exchange Program</h3>
-                            <p class="news-card-description">
-                                Kesempatan belajar di luar negeri melalui program pertukaran mahasiswa.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-card-border">
-                    <div class="news-card">
-                        <img src="img/news8.png" alt="News 8" class="news-card-img"> 
-                        <div class="news-card-content">
-                            <h3 class="news-card-title">New Publication</h3>
-                            <p class="news-card-description">
-                                Rilis publikasi ilmiah terbaru dari anggota tim peneliti kami.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="news-card-border">
-                    <div class="news-card">
-                        <img src="img/news9.png" alt="News 9" class="news-card-img"> 
-                        <div class="news-card-content">
-                            <h3 class="news-card-title">Community Service</h3>
-                            <p class="news-card-description">
-                                Kegiatan pengabdian masyarakat berbasis teknologi untuk dampak sosial.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        <div class="grid-nav-buttons">
-            
-            <a href="javascript:void(0)" class="circle-btn-bottom" id="btnCollapse">
-                <i class="fa-solid fa-chevron-left"></i>
-            </a>
-
-            <a href="javascript:void(0)" class="circle-btn-bottom">
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
-
-        </div>
-
-        </div>
 
     </section>
 
     <section class="gallery-section">
-        <div class="gallery-container">
-            <div class="gallery-left">
-                <img src="img/visual jurney.png" alt="Gallery Highlight" class="gallery-hero-img">
-                <p class="gallery-description">
-                    Di balik setiap potret, ada kisah dan perasaan yang hidup. Inilah bagian kecil dari cerita besar kita — tempat kenangan tumbuh dan tak pernah hilang.
-                </p>
-                <a href="#" class="btn-view-more">
-                    <span>View More</span>
-                </a>
-            </div>
+            <div class="gallery-container">
+                <div class="gallery-left">
+                    <img src="img/visual jurney.png" alt="Gallery Highlight" class="gallery-hero-img">
+                    <p class="gallery-description">
+                        Di balik setiap potret, ada kisah dan perasaan yang hidup. Inilah bagian kecil dari cerita besar kita — tempat kenangan tumbuh dan tak pernah hilang.
+                    </p>
+                    <a href="#" class="btn-view-more">
+                        <span>View More</span>
+                    </a>
+                </div>
 
-            <div class="gallery-right">
-                <div class="gallery-capsule mt-down">
-                    <img src="img/galery2.png" alt="Gallery 1">
-                </div>
-                <div class="gallery-capsule mt-up">
-                    <img src="img/galery1.png" alt="Gallery 2">
-                </div>
-                <div class="gallery-capsule mt-down">
-                    <img src="img/galery3.png" alt="Gallery 3">
+                <div class="gallery-right">
+                    <div class="gallery-capsule mt-down">
+                        <img src="img/galery2.png" alt="Gallery 1">
+                    </div>
+                    <div class="gallery-capsule mt-up">
+                        <img src="img/galery1.png" alt="Gallery 2">
+                    </div>
+                    <div class="gallery-capsule mt-down">
+                        <img src="img/galery3.png" alt="Gallery 3">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <section class="activity-section">
         <h2 class="section-title gradient-text">Aktifiti</h2>
@@ -280,8 +272,7 @@
             </a>
             <div class="video-card-wrapper">
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID"
-                        frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -293,83 +284,64 @@
         </div>
     </section>
 
-<script>
-    const toggleBtn = document.getElementById('toggleNewsBtn');    // Tombol Tengah Utama
-    const moreNewsSection = document.getElementById('moreNewsSection'); // Bagian 6 Berita Tambahan
-    const btnCollapse = document.getElementById('btnCollapse');    // Tombol Kiri Bawah
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('toggleNewsBtn');
+            const moreNewsSection = document.getElementById('moreNewsSection');
+            const btnCollapse = document.getElementById('btnCollapse');
 
-    // 1. FUNGSI BUKA (Saat Tombol Tengah diklik)
-    toggleBtn.addEventListener('click', function(e) {
-        e.preventDefault(); 
-        
-        // Munculkan 6 kotak berita
-        moreNewsSection.style.display = "block";
-        
-        // Sembunyikan tombol tengah ini sendiri
-        toggleBtn.style.display = "none";
-    });
+            if (toggleBtn && moreNewsSection && btnCollapse) {
+                toggleBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    moreNewsSection.style.display = 'block';
+                    toggleBtn.style.display = 'none';
+                });
 
-    // 2. FUNGSI TUTUP (Saat Tombol Kiri Bawah diklik)
-    btnCollapse.addEventListener('click', function(e) {
-        e.preventDefault();
+                btnCollapse.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    moreNewsSection.style.display = 'none';
+                    toggleBtn.style.display = 'flex';
+                    const newsSection = document.querySelector('.news-section');
+                    if (newsSection) {
+                        newsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
 
-        // Sembunyikan kembali 6 kotak berita
-        moreNewsSection.style.display = "none";
+            const navPill = document.querySelector('.nav-pill');
+            const indicator = document.querySelector('.nav-indicator');
+            const navItems = document.querySelectorAll('.nav-item');
 
-        // MUNCULKAN KEMBALI tombol tengah (Reset)
-        // Kita pakai 'flex' agar posisinya tetap rapi di tengah (sesuai CSS aslinya)
-        toggleBtn.style.display = "flex"; 
-        
-        // Opsional: Scroll sedikit ke atas agar user sadar tampilan sudah menutup
-        document.querySelector('.news-section').scrollIntoView({ behavior: 'smooth' });
+            if (navPill && indicator && navItems.length) {
+                const handleIndicator = (el) => {
+                    navItems.forEach((item) => {
+                        item.classList.remove('active');
+                        item.style.color = '';
+                    });
 
-// --- SCRIPT SLIDING MENU YANG DIPERBAIKI ---
-    const navPill = document.querySelector('.nav-pill'); // Container utama
-    const indicator = document.querySelector('.nav-indicator');
-    const items = document.querySelectorAll('.nav-item');
+                    const parentRect = navPill.getBoundingClientRect();
+                    const elementRect = el.getBoundingClientRect();
+                    indicator.style.width = `${elementRect.width}px`;
+                    indicator.style.left = `${elementRect.left - parentRect.left}px`;
+                    indicator.style.top = `${elementRect.top - parentRect.top}px`;
+                    indicator.style.opacity = '1';
 
-    function handleIndicator(el) {
-        items.forEach(item => {
-            item.classList.remove('active');
-            item.style.color = ""; 
+                    el.classList.add('active');
+                    el.style.color = 'white';
+                };
+
+                navItems.forEach((item) => {
+                    item.addEventListener('mouseenter', () => handleIndicator(item));
+                    item.addEventListener('focus', () => handleIndicator(item));
+                });
+
+                const activeItem = document.querySelector('.nav-item.active') || navItems[0];
+                if (activeItem) {
+                    handleIndicator(activeItem);
+                }
+            }
         });
-
-        // 1. Ambil koordinat kotak container utama
-        const parentRect = navPill.getBoundingClientRect();
-        
-        // 2. Ambil koordinat tombol yang disorot
-        const elementRect = el.getBoundingClientRect();
-
-        // 3. Hitung jarak selisihnya (Posisi Akurat)
-        const relativeLeft = elementRect.left - parentRect.left;
-        const relativeTop = elementRect.top - parentRect.top;
-
-        // 4. Terapkan ke indikator
-        indicator.style.width = `${elementRect.width}px`;
-        indicator.style.left = `${relativeLeft}px`;
-        indicator.style.top = `${relativeTop}px`; // Jaga-jaga agar vertikal juga pas
-        
-        indicator.style.opacity = '1'; 
-
-        el.classList.add('active');
-        el.style.color = "white";
-    }
-
-    items.forEach((item) => {
-        item.addEventListener('mouseenter', (e) => {
-            handleIndicator(e.target);
-        });
-    });
-
-    // Jalankan saat halaman selesai dimuat agar tombol Home langsung aktif
-    window.addEventListener('load', () => {
-        // Cari menu yang punya kelas 'active' di HTML, atau default ke yang pertama
-        const activeItem = document.querySelector('.nav-item.active') || items[0];
-        if(activeItem) {
-            handleIndicator(activeItem);
-        }
-    });
-</script>
+    </script>
 
 </body>
 
