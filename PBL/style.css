@@ -622,59 +622,37 @@ h1 {
     }
 }
 
-/* --- EXTRA NEWS GRID (HIDDEN SECTION) --- */
+/* --- EXTRA NEWS GRID (Menggunakan ulang news-container style) --- */
 
 .more-news-wrapper {
     margin-top: 60px;
     width: 100%;
-    animation: slideDown 0.5s ease-out; /* Animasi muncul halus */
+    animation: slideDown 0.5s ease-out; 
 }
 
-/* Grid Layout 3 Kolom x 3 Baris */
-.news-grid-3x3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 Kolom sama besar */
-    gap: 30px; /* Jarak antar kotak */
-    max-width: 1000px;
-    margin: 0 auto 50px auto; /* Margin bawah untuk jarak ke tombol nav */
-    padding: 0 20px;
+/* Menggunakan kelas .news-container untuk grid tambahan */
+.additional-news-grid {
+    /* news-container sudah punya display:flex, gap, dll */
+    /* Pastikan max-width dan margin: 0 auto; ada pada .news-container */
+    /* Jika ingin memaksa 3 kolom di layar lebar: */
+    /* grid-template-columns: repeat(3, 1fr); */ 
+    /* display: grid; */ /* ini jika Anda ingin pakai grid */
+    /* gap: 40px; */ /* disesuaikan dengan news-container */
 }
 
-/* Styling Kotak Abu-abu */
-.grid-news-card {
-    background-color: #C4C4C4; /* Warna abu-abu sesuai referensi gambar */
-    border-radius: 15px;
-    width: 100%;
-    height: 0;
-    padding-bottom: 130%; /* Membuat kotak persegi panjang vertikal (Aspect Ratio) */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.grid-news-card:hover {
-    transform: translateY(-5px);
-    background: linear-gradient(135deg, var(--primary-blue), var(--gradient-end)); /* Efek hover */
-}
-
-/* Tombol Navigasi di Bawah Grid */
+/* Tombol Navigasi di Bawah Grid (jika ada) */
 .grid-nav-buttons {
     display: flex;
     justify-content: center;
-    gap: 150px; /* Jarak jauh antara kiri dan kanan sesuai gambar */
-    margin-top: 20px;
+    gap: 150px; 
+    margin-top: 50px; /* Jarak dari kartu ke tombol */
 }
 
-/* Animasi slide ke bawah saat tombol ditekan */
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive Mobile: Jadi 1 kolom saja */
+/* Responsive Mobile */
 @media (max-width: 768px) {
-    .news-grid-3x3 {
-        grid-template-columns: 1fr; /* 1 kolom di HP */
-        gap: 20px;
+    .news-container.additional-news-grid {
+        flex-direction: column; /* Menumpuk vertikal di mobile */
+        align-items: center; /* Kartu berada di tengah */
     }
     .grid-nav-buttons {
         gap: 50px;
